@@ -1,0 +1,29 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+	<h1 style="text-align:center">Recherche d'un utilisateur - Examen Node Js</h1>
+	<hr/>
+	<table border="1">
+    
+			<form action="http://localhost:3000/users/search" method="post">
+		<tr>
+			<td>
+				Email
+			</td>
+				<td>
+					<input type="text" name="email" placeholder="Rechercher un utilisateur"/>
+				</td>
+
+
+
+		</tr>
+        <tr>
+            <td>
+            <input type="submit" value="trouver" />
+            </td>
+        </tr>
+        
+			</form>
+	</table>
+
+{% endblock %}

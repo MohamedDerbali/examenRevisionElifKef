@@ -1,0 +1,22 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+<table border="1">
+    <tr>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Actions</th>
+    </tr>
+    {% for user in users %}
+    <tr>
+        <td>{{ user.username }}</td>
+        <td>{{ user.email }}</td>
+        <td>
+            <a href="http://localhost:3000/users/delete/{{user._id}}">delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+{% endblock %}

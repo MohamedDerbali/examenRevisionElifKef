@@ -1,0 +1,22 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+  <h1 style="text-align:center">Authentification - Examen Node Js</h1>
+  <hr/>
+  <form method="post" action="http://localhost:3000/users/auth">
+    <table>
+        <tr>
+            <td><label for="username">Login</label></td>
+            <td><input type="text" name="username" id="username" /></td>
+        </tr>
+        <tr>
+            <td><label for="password">Password</label></td>
+            <td><input type="password" name="password" id="password" /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Se connecter" /></td>
+        </tr>
+    </table>
+  </form>
+{% endblock %}

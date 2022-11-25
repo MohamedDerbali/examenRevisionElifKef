@@ -1,0 +1,39 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+<h1 style="text-align:center">Gestion Users - Examen Node Js</h1>
+  <hr/>
+<form method="post" action="http://localhost:3000/users/addUser">
+    <table>
+        <tr>
+            <td><label for="username">Username</label></td>
+            <td><input type="text" name="username" id="username" /></td>
+        </tr>
+        <tr>
+           <td><label for="email">Email</label></td>
+            <td><input type="text" name="email" id="email" /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="ajouter" /></td>
+        </tr>
+    </table>
+  </form>
+<table border="1">
+<tr>
+ <a href="http://localhost:3000/users/search"> Gerer user</a> 
+</tr>
+<tr>
+ <td>Username
+ </td>
+ <td>Email
+ </td>
+</tr>
+{% for user in users %}
+<tr>
+ <td>{{user.username}}</td>
+ <td>{{user.email}}</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}
